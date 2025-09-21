@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*
+#####################################################################
+
+	目次【INDEX】
+	
+#####################################################################
+
+■ボディ【body】
+
+■リンク【a】
+
+■ラッパー【wrapper】
+
+■ギャラリー【gallery】
+
+
+
+*/
+
+
+/*
+#####################################################################
+
+	ボディ【body】
+	
+#####################################################################
+*/
+
+
+html {
+    color: #FFF;
+	background-color:#071b26;
+    font-size:28px;
+	font-family:"游ゴシック","YuGothic","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	letter-spacing:0.01rem;
+	font-weight: normal;
+}
+
+/*テキスト選択時のハイライトのカラー*/
+*::selection { background: #d2c4a7; }
+*::-moz-selection { background: #d2c4a7;}
+
+@media screen and (max-width : 920px){
+	html {
+    	font-size:20px;
+	}
+}
+
+@media screen and (max-width : 479px){
+	html {
+    	font-size:14px;
+	}
+}
+
+/*
+#####################################################################
+
+	リンク【a】
+	
+#####################################################################
+*/
+
+a{ 
+	color: #FFF;
+	text-decoration:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*スマホ時ハイライトカラーを「無効」*/
+}
+
+a:hover{
+
+	text-decoration:none;
+}
+
+/*
+#####################################################################
+
+	ラッパー【wrapper】
+	
+#####################################################################
+*/
+
+.wrapper,
+.wrapper2{
+    margin: 0 auto;
+	padding:0 0;
+}
+.wrapper{ max-width:890px;}
+.wrapper2{ max-width:1000px;}
+
+@media screen and (max-width : 920px){
+	.wrapper{ padding:0 65px 0 55px;}
+}
+
+@media screen and (max-width : 479px){
+	.wrapper{ width:100%; padding:0 65px 0 55px;}
+}
+
+
+/*
+#####################################################################
+
+	ギャラリー【gallery】
+	
+#####################################################################
+*/
+
+.gallery .title{position:absolute; top:0; left:0; z-index:10000;}
+.gallery.active .title{z-index:-1;}
+
+.anmation_container.active .copy_delay1,
+.anmation_container.active .copy_delay2,
+.anmation_container.active .copy_delay3,
+.anmation_container.active .copy_delay4,
+.anmation_container.active .copy_delay5{
+	-webkit-transition: 1.8s;
+	-moz-transition: 1.8s;
+	-o-transition: 1.8s;
+	transition: 1.8s;
+}
+
+.copy_delay1{transition-delay: 0.6s!important;}
+.copy_delay4{transition-delay: 0.7s!important;}
+.copy_delay2{transition-delay: 0.8s!important;}
+.copy_delay5{transition-delay: 0.9s!important;}
+.copy_delay3{transition-delay: 1.0s!important;}
+
+
